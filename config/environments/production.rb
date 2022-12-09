@@ -5,8 +5,13 @@ require 'active_support/core_ext/integer/time'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  routes.default_url_options[:host] = 'test-deploy-with-railway-production-6c82.up.railway.app'
+
   # Code is not reloaded between requests.
   config.cache_classes = true
+
+  config.hosts << "rails-production-c0ec.up.railway.app"
+
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
